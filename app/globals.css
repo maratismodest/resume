@@ -18,23 +18,40 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  @apply min-h-screen flex flex-col
+  /*background: linear-gradient(*/
+  /*    to bottom,*/
+  /*    transparent,*/
+  /*    rgb(var(--background-end-rgb))*/
+  /*  )*/
+  /*  rgb(var(--background-start-rgb));*/
+  @apply min-h-screen flex flex-col scroll-smooth
 }
 
-header {
-  @apply p-4
-}
 
-main {
-  @apply flex-1 p-4
-}
+@layer base {
+  header {
+    @apply p-4 max-w-5xl w-full mx-auto
+  }
 
-footer {
-  @apply p-4
+  main {
+    @apply flex-1 p-4 max-w-5xl w-full mx-auto relative
+  }
+
+  footer {
+    @apply p-4 max-w-5xl w-full mx-auto
+  }
+
+  h1 {
+    @apply text-xl font-bold
+  }
+  h2 {
+    @apply text-lg font-bold
+  }
+  h3 {
+    @apply text-base font-bold
+  }
+
+  a {
+    @apply underline
+  }
 }
