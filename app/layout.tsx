@@ -20,9 +20,10 @@ export default function RootLayout({
     <body className={inter.className}>
     <header className='sticky top-0 z-10 bg-white border-b'>
       <nav className='flex justify-around'>
-        <a href='https://www.linkedin.com/in/marat-faizerakhmanov'>My Linkedin</a>
-        <a href='https://github.com/maratismodest'>My Github</a>
-        <a href='https://t.me/maratfaizer'>My Telegram</a>
+        <a href='https://www.linkedin.com/in/marat-faizerakhmanov'>Linkedin</a>
+        <a href='https://github.com/maratismodest'>Github</a>
+        <a href='https://t.me/maratfaizer'>Telegram</a>
+        {/*<a href="api/pdf" download="marat-faizerakhmanov.pdf">Download PDF</a>*/}
       </nav>
     </header>
     <main>

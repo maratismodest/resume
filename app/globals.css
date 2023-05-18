@@ -16,6 +16,10 @@
   }
 }
 
+html {
+  -webkit-print-color-adjust: exact; /* This makes sure that the PDF is rendered exactly like our layout. */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   /*background: linear-gradient(*/
