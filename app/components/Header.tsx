@@ -1,11 +1,7 @@
 'use client'
+import MyDocument from "@/app/components/MyDocument";
 import {PDFDownloadLink} from "@react-pdf/renderer";
-import dynamic from "next/dynamic";
 import React, {useEffect, useState} from 'react';
-
-const MyDocument = dynamic(() => import('../components/MyDocument'), {
-  ssr: false,
-});
 
 const Header = () => {
   const [isClient, setIsClient] = useState(false)
@@ -13,6 +9,7 @@ const Header = () => {
   useEffect(() => {
     setIsClient(true)
   }, [])
+
   return (
     <header className='sticky top-0 z-10 bg-white border-b'>
       <nav className='flex justify-around'>
