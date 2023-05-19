@@ -1,7 +1,8 @@
+'use server'
 import puppeteer from "puppeteer";
 
 export async function GET() {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({headless:true})
   const page = await browser.newPage()
 
   await page.goto('https://marat-faizerakhmanov.vercel.app')

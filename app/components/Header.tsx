@@ -1,7 +1,5 @@
 'use client'
 import React from 'react';
-import { jsPDF } from "jspdf";
-const doc = new jsPDF();
 
 const Header = () => {
   return (
