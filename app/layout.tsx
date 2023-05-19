@@ -23,13 +23,13 @@ export default function RootLayout({
         <a href='https://www.linkedin.com/in/marat-faizerakhmanov'>Linkedin</a>
         <a href='https://github.com/maratismodest'>Github</a>
         <a href='https://t.me/maratfaizer'>Telegram</a>
-        <a href="api/pdf" download="marat-faizerakhmanov.pdf">Download PDF</a>
+        {/*<a href="api/pdf" download="marat-faizerakhmanov.pdf">Download PDF</a>*/}
       </nav>
     </header>
     <main>
       {children}
     </main>
-    <footer className='flex justify-center sr-only'>
+    <footer className='flex justify-center'>
       <Link href='#'>Scroll on Top</Link>
     </footer>
     </body>
