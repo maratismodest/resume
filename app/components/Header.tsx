@@ -17,7 +17,7 @@ const Header = () => {
         <a href='https://github.com/maratismodest'>Github</a>
         <a href='https://t.me/maratfaizer'>Telegram</a>
         {isClient ? <PDFDownloadLink document={<MyDocument/>} fileName="marat-faizerakhmanov.pdf">
-          {({blob, url, loading, error}) => (loading ? 'Loading document...' : 'Download')}
+          {({blob, url, loading, error}) => ('Download')}
         </PDFDownloadLink> : null}
       </nav>
     </header>
