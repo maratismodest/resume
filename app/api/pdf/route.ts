@@ -1,4 +1,3 @@
-'use server'
 import puppeteer from "puppeteer";
 
 export async function GET() {
