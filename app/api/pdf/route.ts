@@ -17,10 +17,10 @@ export async function GET(req: NextRequest, res: NextResponse) {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://marat-faizerakhmanov.vercel.app', {waitUntil: 'networkidle2'});
-  await page.pdf({path: 'marat-faizerakhmanov.pdf', format: 'A4'});
+  const pdfBuffer = await page.pdf({path: 'marat-faizerakhmanov.pdf', format: 'A4'});
 
   await browser.close();
-  return new Response(page, {
+  return new Response(pdfBuffer, {
     status: 200,
   });
 }
