@@ -1,4 +1,5 @@
 import './globals.css'
+import Header from "@/app/components/Header";
 import type {Metadata} from "next";
 import {Inter} from 'next/font/google'
 import Link from "next/link";
@@ -18,14 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={inter.className}>
-    <header className='sticky top-0 z-10 bg-white border-b'>
-      <nav className='flex justify-around'>
-        <a href='https://www.linkedin.com/in/marat-faizerakhmanov'>Linkedin</a>
-        <a href='https://github.com/maratismodest'>Github</a>
-        <a href='https://t.me/maratfaizer'>Telegram</a>
-        <a href="api/pdf" download="marat-faizerakhmanov.pdf">Download PDF</a>
-      </nav>
-    </header>
+    <Header />
     <main>
       {children}
     </main>
