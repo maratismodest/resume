@@ -1,5 +1,5 @@
 import {NextRequest, NextResponse} from "next/server";
-// import puppeteer from 'puppeteer'
+import puppeteer from 'puppeteer'
 
 export async function GET(req: NextRequest, res: NextResponse) {
 
@@ -14,7 +14,13 @@ export async function GET(req: NextRequest, res: NextResponse) {
   // return new Response(pdfBuffer, {
   //   status: 200,
   // });
-  return new Response('Hello World!', {
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('https://marat-faizerakhmanov.vercel.app', {waitUntil: 'networkidle2'});
+  await page.pdf({path: 'marat-faizerakhmanov.pdf', format: 'A4'});
+
+  await browser.close();
+  return new Response(page, {
     status: 200,
   });
 }
