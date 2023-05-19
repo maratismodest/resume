@@ -1,5 +1,5 @@
 'use client'
-import MyDocument from "@/app/components/MyDocument";
+import MyDocument, {resume} from "@/app/components/MyDocument";
 import {PDFDownloadLink} from "@react-pdf/renderer";
 import React, {useEffect, useState} from 'react';
 
@@ -16,9 +16,9 @@ const Header = () => {
         <a href='https://www.linkedin.com/in/marat-faizerakhmanov'>Linkedin</a>
         <a href='https://github.com/maratismodest'>Github</a>
         <a href='https://t.me/maratfaizer'>Telegram</a>
-        {isClient ? <PDFDownloadLink document={<MyDocument/>} fileName="marat-faizerakhmanov.pdf">
+        {isClient ? <PDFDownloadLink document={<MyDocument resume={resume}/>} fileName="marat-faizerakhmanov.pdf">
           {({blob, url, loading, error}) => ('Download')}
-        </PDFDownloadLink> : <a href='#'></a>}
+        </PDFDownloadLink> : <a href='#'>Download</a>}
       </nav>
     </header>
   );
