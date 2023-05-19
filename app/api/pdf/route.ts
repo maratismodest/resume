@@ -7,7 +7,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
     const browser = await puppeteer.launch({headless: 'new'})
     const page = await browser.newPage()
 
-    await page.goto('https://marat-faizerakhmanov.vercel.app')
+    await page.goto('https://marat-faizerakhmanov.vercel.app/')
     await page.emulateMediaType('screen')
 
     const pdfBuffer = await page.pdf({format: 'A4'})
